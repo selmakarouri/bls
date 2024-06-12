@@ -28,7 +28,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
     "use strict";
 
     var isOkButtonClicked = false;
-    async function RemplirCategoryId() {
+        async function RemplirCategoryId() {
         var AppointmentCategoryIdElement;
         var isVisible;
         for (var i = 1; i < 10; i++) {
@@ -52,6 +52,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 }
             }
         }
+    }
     }
 
     async function RemplirLocation() {
