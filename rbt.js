@@ -1,4 +1,5 @@
 
+
 var vtvUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vtv";
 var thirdUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vt";
 
