@@ -913,7 +913,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
         clearInterval(a);
       }
     }, 100);
-  }, 120);
+  }, 140);
 
     //-------------------//
 
