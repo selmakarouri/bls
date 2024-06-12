@@ -325,31 +325,31 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     "use strict";
 
     var isOkButtonClicked = false;
-
-    async function RemplirCategoryId() {
-      var AppointmentCategoryIdElement;
-      var isVisible;
-      for (var i = 1; i < 10; i++) {
-        AppointmentCategoryIdElement = document.querySelector(
-          '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
-        );
-        if (AppointmentCategoryIdElement !== null) {
-          isVisible = AppointmentCategoryIdElement.offsetParent !== null;
-
-          if (isVisible) {
-            console.log("Appointment " + i + " is visible");
-            var AppCategoryId = $("#AppointmentCategoryId" + i).data(
-              "kendoDropDownList"
+   async function RemplirCategoryId() {
+        var AppointmentCategoryIdElement;
+        var isVisible;
+        for (var i = 1; i < 10; i++) {
+            AppointmentCategoryIdElement = document.querySelector(
+                '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
             );
-            AppCategoryId.select(1); // 1 corresponds to 'Normal'
-            AppCategoryId.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
-          }
-        }
-      }
-    }
+            if (AppointmentCategoryIdElement !== null) {
+                isVisible = AppointmentCategoryIdElement.offsetParent !== null;
 
+                if (isVisible) {
+                    console.log("Appointment " + i + " is visible");
+                    var AppCategoryId = $("#AppointmentCategoryId" + i).data(
+                        "kendoDropDownList"
+                    );
+                    AppCategoryId.select(1); // 1 corresponds to 'Normal'
+                    AppCategoryId.trigger("change");
+
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+                } else {
+                    // console.log("Element " + i + " is not visible");
+                }
+            }
+        }
+    }
     async function RemplirLocation() {
       var locationElement;
       var isVisibleLocation;
