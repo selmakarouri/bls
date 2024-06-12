@@ -389,7 +389,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
         );
         if (VisaTypeElement !== null) {
           isVisibleVisa = VisaTypeElement.offsetParent !== null;
-
+          
           if (isVisibleVisa) {
             console.log("VisaType " + i + " is visible");
             var VisaType = $("#VisaType" + i).data("kendoDropDownList");
