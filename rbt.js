@@ -6,8 +6,6 @@ var thirdUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vt";
 
 
 
-
-
 //تحقق من الصفحة ونفذ الإجراء المناسب
 
 if (window.location.href.startsWith(vtvUrlPrefix)) {
