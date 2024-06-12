@@ -27,30 +27,6 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
     var isOkButtonClicked = false;
 
-    async function RemplirCategoryId() {
-      var AppointmentCategoryIdElement;
-      var isVisible;
-      for (var i = 1; i < 10; i++) {
-        AppointmentCategoryIdElement = document.querySelector(
-          '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
-        );
-        if (AppointmentCategoryIdElement !== null) {
-          isVisible = AppointmentCategoryIdElement.offsetParent !== null;
-
-          if (isVisible) {
-            console.log("Appointment " + i + " is visible");
-            var AppCategoryId = $("#AppointmentCategoryId" + i).data(
-              "kendoDropDownList"
-            );
-            AppCategoryId.select(1); // 1 corresponds to 'Normal'
-            AppCategoryId.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
-          }
-        }
-      }
-    }
-
     async function RemplirLocation() {
       var locationElement;
       var isVisibleLocation;
@@ -72,7 +48,6 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
         }
       }
     }
-
     async function RemplirVisaType() {
       var VisaTypeElement;
       var isVisibleVisa;
@@ -101,7 +76,63 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
         }
       }
     }
+  async function RemplirVisaType() {
+      var VisaTypeElement;
+      var isVisibleVisa;
+      for (var i = 1; i < 10; i++) {
+        VisaTypeElement = document.querySelector(
+          '[aria-owns="VisaType' + i + '_listbox"]'
+        );
+        if (VisaTypeElement !== null) {
+          isVisibleVisa = VisaTypeElement.offsetParent !== null;
 
+          if (isVisibleVisa) {
+            console.log("VisaType " + i + " is visible");
+            var VisaType = $("#VisaType" + i).data("kendoDropDownList");
+            VisaType.select(1); // 1 corresponds to 'Short Stay Visa'
+            VisaType.trigger("change");
+
+            await new Promise(resolve => {
+              setTimeout(resolve, 100);
+            });
+
+            // Click the 'Ok' button in the modal
+            $('button[data-bs-dismiss="modal"]').click();
+          } else {
+            // console.log("VisaType " + i + " is not visible");
+          }
+        }
+      }
+    }
+
+    async function RemplirCategoryId() {
+      var AppointmentCategoryIdElement;
+      var isVisible;
+      for (var i = 1; i < 10; i++) {
+        AppointmentCategoryIdElement = document.querySelector(
+          '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
+        );
+        if (AppointmentCategoryIdElement !== null) {
+          isVisible = AppointmentCategoryIdElement.offsetParent !== null;
+
+          if (isVisible) {
+            console.log("Appointment " + i + " is visible");
+            var AppCategoryId = $("#AppointmentCategoryId" + i).data(
+              "kendoDropDownList"
+            );
+            AppCategoryId.select(1); // 1 corresponds to 'Normal'
+            AppCategoryId.trigger("change");
+
+              await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+          } else {
+            // console.log("Element " + i + " is not visible");
+          }
+        }
+      }
+    }
+
+
+  
     async function RemplirVisaSubType() {
       var VisaSubTypeElement;
       var isVisibleSubVisa;
