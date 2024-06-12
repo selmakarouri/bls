@@ -163,37 +163,38 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
     $('button[data-bs-dismiss="modal"]').on("click", handleOkButtonClick);
 
-    RemplirCategoryId();
-    RemplirLocation();
-    RemplirVisaType();
+    await RemplirLocation();
+    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+    await RemplirVisaType();
+    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+    await RemplirCategoryId();
 
-        //--------------------//
+    //--------------------//
     var OnVerifyCaptcha;
-  var onAjaxSuccess;
+    var onAjaxSuccess;
 
-  // تأخير تنفيذ الشيفرة لمدة 3 ثواني
-  setTimeout(function () {
-    var f = setInterval(function () {
-      if (
-        typeof OnVerifyCaptcha !== "undefined" &&
-        typeof b !== "undefined" &&
-        typeof d !== "undefined"
-      ) {
-        window.OnVerifyCaptcha = OnVerifyCaptcha;
-        $("#dpModal").modal("hide");
-        window.onDpAccept = OnVerifyCaptcha;
-        window.onDpReject = onAjaxSuccess;
-        clearInterval(f);
-      }
-    }, 100);
+    setTimeout(function () {
+        var f = setInterval(function () {
+            if (
+                typeof OnVerifyCaptcha !== "undefined" &&
+                typeof b !== "undefined" &&
+                typeof d !== "undefined"
+            ) {
+                window.OnVerifyCaptcha = OnVerifyCaptcha;
+                $("#dpModal").modal("hide");
+                window.onDpAccept = OnVerifyCaptcha;
+                window.onDpReject = onAjaxSuccess;
+                clearInterval(f);
+            }
+        }, 100);
 
-    var a = setInterval(function () {
-      if ($("#btnSubmit").is(":visible")) {
-        $("#btnSubmit").click();
-        clearInterval(a);
-      }
-    }, 100);
-  }, 120);
+        var a = setInterval(function () {
+            if ($("#btnSubmit").is(":visible")) {
+                $("#btnSubmit").click();
+                clearInterval(a);
+            }
+        }, 100);
+    }, 120);
 
     //-------------------//
 
