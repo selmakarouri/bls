@@ -1092,8 +1092,7 @@ function playAudioOnPageLoad() {
 
 // استدعاء الدالة عند تحميل الصفحة
 window.onload = playAudioOnPageLoad;
-
-
+  
 
 
 //------------------APp-------------------------//
