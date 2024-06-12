@@ -240,7 +240,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
             VisaType.trigger("change");
 
             await new Promise(resolve => {
-              setTimeout(resolve, 100);
+              setTimeout(resolve, 200);
             });
 
             // Click the 'Ok' button in the modal
@@ -389,7 +389,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
             VisaType.trigger("change");
 
             await new Promise(resolve => {
-              setTimeout(resolve, 100);
+              setTimeout(resolve, 200);
             });
 
             // Click the 'Ok' button in the modal
@@ -453,15 +453,15 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
         window.onDpReject = onAjaxSuccess;
         clearInterval(f);
       }
-    }, 100);
+    }, 200);
 
     var a = setInterval(function () {
       if ($("#btnSubmit").is(":visible")) {
         $("#btnSubmit").click();
         clearInterval(a);
       }
-    }, 100);
-  }, 120);
+    }, 200);
+  }, 130);
 
     //-------------------//
 
