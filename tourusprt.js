@@ -26,7 +26,6 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   const RabatTNormalButton = createButton("Rabat Tourism Normal", function() {
 (function () {
     "use strict";
-
 (async function() {
     'use strict';
 
@@ -42,7 +41,30 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
     let isOkButtonClicked = false;
 
-    
+    async function RemplirLocation() {
+        var locationElement;
+        var isVisibleLocation;
+        for (var i = 1; i < 10; i++) {
+            locationElement = document.querySelector(
+                '[aria-owns="Location' + i + '_listbox"]'
+            );
+            if (locationElement !== null) {
+                isVisibleLocation = locationElement.offsetParent !== null;
+
+                if (isVisibleLocation) {
+                    console.log("Location " + i + " is visible");
+                    var Location = $("#Location" + i).data("kendoDropDownList");
+                    Location.select(1); //1 corresponds to 'Rabat'
+                    Location.trigger("change");
+
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+                } else {
+                    // console.log("Element " + i + " is not visible");
+                }
+            }
+        }
+    }
+
     async function RemplirVisaType() {
         var VisaTypeElement;
         var isVisibleVisa;
@@ -166,6 +188,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
     }, 120);
 
 })();
+
 
     //-------------------//
 
