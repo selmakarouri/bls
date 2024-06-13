@@ -322,10 +322,7 @@ const CasaWPremiumButton = createButton("Casa Work Premium", function() {
   const RabatWNormalButton = createButton("Rabat Work Normal", function() {
 (function () {
     "use strict";
-
-    var isOkButtonClicked = false;
-
-    (async function() {
+(async function() {
     'use strict';
 
     var vtvUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vtv";
@@ -485,6 +482,9 @@ const CasaWPremiumButton = createButton("Casa Work Premium", function() {
             }
         }, 100);
     }, 120);
+
+})();
+
 
 })();
 
