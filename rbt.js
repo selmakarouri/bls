@@ -9,7 +9,6 @@ var thirdUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vt";
 
 
 //تحقق من الصفحة ونفذ الإجراء المناسب
-
 if (window.location.href.startsWith(vtvUrlPrefix)) {
   const btnVerify = document.querySelector("#btnVerify");
   if (btnVerify) {
@@ -23,304 +22,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   // دالة لإضافة الأزرار إلى الصفحة
 
   // إنشاء الأزرار
-  const RabatTNormalButton = createButton("Rabat Tourism Normal", function() {
-(function () {
-    "use strict";
-
-    var isOkButtonClicked = false;
-
-    async function RemplirCategoryId() {
-      var AppointmentCategoryIdElement;
-      var isVisible;
-      for (var i = 1; i < 10; i++) {
-        AppointmentCategoryIdElement = document.querySelector(
-          '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
-        );
-        if (AppointmentCategoryIdElement !== null) {
-          isVisible = AppointmentCategoryIdElement.offsetParent !== null;
-
-          if (isVisible) {
-            console.log("Appointment " + i + " is visible");
-            var AppCategoryId = $("#AppointmentCategoryId" + i).data(
-              "kendoDropDownList"
-            );
-            AppCategoryId.select(1); // 1 corresponds to 'Normal'
-            AppCategoryId.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    async function RemplirLocation() {
-      var locationElement;
-      var isVisibleLocation;
-      for (var i = 1; i < 10; i++) {
-        locationElement = document.querySelector(
-          '[aria-owns="Location' + i + '_listbox"]'
-        );
-        if (locationElement !== null) {
-          isVisibleLocation = locationElement.offsetParent !== null;
-
-          if (isVisibleLocation) {
-            console.log("Location " + i + " is visible");
-            var Location = $("#Location" + i).data("kendoDropDownList");
-            Location.select(1); // 1 corresponds to 'Rabat'
-            Location.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    async function RemplirVisaType() {
-      var VisaTypeElement;
-      var isVisibleVisa;
-      for (var i = 1; i < 10; i++) {
-        VisaTypeElement = document.querySelector(
-          '[aria-owns="VisaType' + i + '_listbox"]'
-        );
-        if (VisaTypeElement !== null) {
-          isVisibleVisa = VisaTypeElement.offsetParent !== null;
-
-          if (isVisibleVisa) {
-            console.log("VisaType " + i + " is visible");
-            var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-            VisaType.select(1); // 1 corresponds to 'Short Stay Visa'
-            VisaType.trigger("change");
-
-            await new Promise(resolve => {
-              setTimeout(resolve, 100);
-            });
-
-            // Click the 'Ok' button in the modal
-            $('button[data-bs-dismiss="modal"]').click();
-          } else {
-            // console.log("VisaType " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    async function RemplirVisaSubType() {
-      var VisaSubTypeElement;
-      var isVisibleSubVisa;
-      for (var i = 1; i < 10; i++) {
-        VisaSubTypeElement = document.querySelector(
-          '[aria-owns="VisaSubType' + i + '_listbox"]'
-        );
-        if (VisaSubTypeElement !== null) {
-          isVisibleSubVisa = VisaSubTypeElement.offsetParent !== null;
-
-          if (isVisibleSubVisa && isOkButtonClicked) {
-            console.log("VisaSubType " + i + " is visible");
-            var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-            VisaSubType.select(3); // 3 corresponds to 'Tourism'
-            VisaSubType.trigger("change");
-          } else {
-            // console.log("VisaType " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    function handleOkButtonClick() {
-      isOkButtonClicked = true;
-
-      RemplirVisaSubType();
-    }
-
-    $('button[data-bs-dismiss="modal"]').on("click", handleOkButtonClick);
-
-    RemplirCategoryId();
-    RemplirLocation();
-    RemplirVisaType();
-
-        //--------------------//
-    var OnVerifyCaptcha;
-  var onAjaxSuccess;
-
-  // تأخير تنفيذ الشيفرة لمدة 3 ثواني
-  setTimeout(function () {
-    var f = setInterval(function () {
-      if (
-        typeof OnVerifyCaptcha !== "undefined" &&
-        typeof b !== "undefined" &&
-        typeof d !== "undefined"
-      ) {
-        window.OnVerifyCaptcha = OnVerifyCaptcha;
-        $("#dpModal").modal("hide");
-        window.onDpAccept = OnVerifyCaptcha;
-        window.onDpReject = onAjaxSuccess;
-        clearInterval(f);
-      }
-    }, 100);
-
-    var a = setInterval(function () {
-      if ($("#btnSubmit").is(":visible")) {
-        $("#btnSubmit").click();
-        clearInterval(a);
-      }
-    }, 100);
-  }, 120);
-
-    //-------------------//
-
-})();
-    console.log("تم تنفيذ الشيفرة لزر Rabat Tourim Normal بنجاح!");
-  });
-const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
-(function () {
-    "use strict";
-
-    var isOkButtonClicked = false;
-
-    async function RemplirCategoryId() {
-      var AppointmentCategoryIdElement;
-      var isVisible;
-      for (var i = 1; i < 10; i++) {
-        AppointmentCategoryIdElement = document.querySelector(
-          '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
-        );
-        if (AppointmentCategoryIdElement !== null) {
-          isVisible = AppointmentCategoryIdElement.offsetParent !== null;
-
-          if (isVisible) {
-            console.log("Appointment " + i + " is visible");
-            var AppCategoryId = $("#AppointmentCategoryId" + i).data(
-              "kendoDropDownList"
-            );
-            AppCategoryId.select(2); // 2 corresponds to 'Premium'
-            AppCategoryId.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    async function RemplirLocation() {
-      var locationElement;
-      var isVisibleLocation;
-      for (var i = 1; i < 10; i++) {
-        locationElement = document.querySelector(
-          '[aria-owns="Location' + i + '_listbox"]'
-        );
-        if (locationElement !== null) {
-          isVisibleLocation = locationElement.offsetParent !== null;
-
-          if (isVisibleLocation) {
-            console.log("Location " + i + " is visible");
-            var Location = $("#Location" + i).data("kendoDropDownList");
-            Location.select(1); // 1 corresponds to 'Rabat'
-            Location.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    async function RemplirVisaType() {
-      var VisaTypeElement;
-      var isVisibleVisa;
-      for (var i = 1; i < 10; i++) {
-        VisaTypeElement = document.querySelector(
-          '[aria-owns="VisaType' + i + '_listbox"]'
-        );
-        if (VisaTypeElement !== null) {
-          isVisibleVisa = VisaTypeElement.offsetParent !== null;
-
-          if (isVisibleVisa) {
-            console.log("VisaType " + i + " is visible");
-            var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-            VisaType.select(1); // 1 corresponds to 'Short Stay Visa'
-            VisaType.trigger("change");
-
-            await new Promise(resolve => {
-              setTimeout(resolve, 100);
-            });
-
-            // Click the 'Ok' button in the modal
-            $('button[data-bs-dismiss="modal"]').click();
-          } else {
-            // console.log("VisaType " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    async function RemplirVisaSubType() {
-      var VisaSubTypeElement;
-      var isVisibleSubVisa;
-      for (var i = 1; i < 10; i++) {
-        VisaSubTypeElement = document.querySelector(
-          '[aria-owns="VisaSubType' + i + '_listbox"]'
-        );
-        if (VisaSubTypeElement !== null) {
-          isVisibleSubVisa = VisaSubTypeElement.offsetParent !== null;
-
-          if (isVisibleSubVisa && isOkButtonClicked) {
-            console.log("VisaSubType " + i + " is visible");
-            var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-            VisaSubType.select(3); // 3 corresponds to 'Tourism'
-            VisaSubType.trigger("change");
-          } else {
-            // console.log("VisaType " + i + " is not visible");
-          }
-        }
-      }
-    }
-
-    function handleOkButtonClick() {
-      isOkButtonClicked = true;
-
-      RemplirVisaSubType();
-    }
-
-    $('button[data-bs-dismiss="modal"]').on("click", handleOkButtonClick);
-
-    RemplirCategoryId();
-    RemplirLocation();
-    RemplirVisaType();
-
-        //--------------------//
-    var OnVerifyCaptcha;
-  var onAjaxSuccess;
-
-  // تأخير تنفيذ الشيفرة لمدة 3 ثواني
-  setTimeout(function () {
-    var f = setInterval(function () {
-      if (
-        typeof OnVerifyCaptcha !== "undefined" &&
-        typeof b !== "undefined" &&
-        typeof d !== "undefined"
-      ) {
-        window.OnVerifyCaptcha = OnVerifyCaptcha;
-        $("#dpModal").modal("hide");
-        window.onDpAccept = OnVerifyCaptcha;
-        window.onDpReject = onAjaxSuccess;
-        clearInterval(f);
-      }
-    }, 100);
-
-    var a = setInterval(function () {
-      if ($("#btnSubmit").is(":visible")) {
-        $("#btnSubmit").click();
-        clearInterval(a);
-      }
-    }, 100);
-  }, 120);
-
-    //-------------------//
-
-})();
-    console.log("تم تنفيذ الشيفرة لزر Rabat Tourism Premium بنجاح!");
-  });
-    
-  const CasaTNormalButton = createButton("Casa Tourism Normal", function() {
+  const CasaWNormalButton = createButton("Casa Work Normal", function() {
 (function () {
     "use strict";
 
@@ -385,7 +87,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleVisa) {
             console.log("VisaType " + i + " is visible");
             var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-            VisaType.select(1); // 1 corresponds to 'Short Stay Visa'
+            VisaType.select(2); // 2 corresponds to 'Long Stay Visa'
             VisaType.trigger("change");
 
             await new Promise(resolve => {
@@ -414,7 +116,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleSubVisa && isOkButtonClicked) {
             console.log("VisaSubType " + i + " is visible");
             var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-            VisaSubType.select(3); // 1 corresponds to 'Tourism'
+            VisaSubType.select(1); // 1 corresponds to 'Work'
             VisaSubType.trigger("change");
           } else {
             // console.log("VisaType " + i + " is not visible");
@@ -466,9 +168,9 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Casa Tourism Normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Casablanca Work Normal بنجاح!");
   });
-  const CasaTPremiumButton = createButton("Casa Tourism Premium", function() {
+const CasaWPremiumButton = createButton("Casa Work Premium", function() {
 (function () {
     "use strict";
 
@@ -511,7 +213,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleLocation) {
             console.log("Location " + i + " is visible");
             var Location = $("#Location" + i).data("kendoDropDownList");
-            Location.select(2); // 2  'Casablanca'
+            Location.select(2); // 2 corresponds to 'Casablanca'
             Location.trigger("change");
           } else {
             // console.log("Element " + i + " is not visible");
@@ -533,7 +235,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleVisa) {
             console.log("VisaType " + i + " is visible");
             var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-            VisaType.select(1); // 1 corresponds to 'Short Stay Visa'
+            VisaType.select(2); // 2 corresponds to 'Long Stay Visa'
             VisaType.trigger("change");
 
             await new Promise(resolve => {
@@ -562,7 +264,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleSubVisa && isOkButtonClicked) {
             console.log("VisaSubType " + i + " is visible");
             var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-            VisaSubType.select(3); // 3 corresponds to 'Tourism'
+            VisaSubType.select(1); // 1 corresponds to 'Work'
             VisaSubType.trigger("change");
           } else {
             // console.log("VisaType " + i + " is not visible");
@@ -582,6 +284,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     RemplirCategoryId();
     RemplirLocation();
     RemplirVisaType();
+
         //--------------------//
     var OnVerifyCaptcha;
   var onAjaxSuccess;
@@ -613,10 +316,10 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Casa Tourism Premium بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Casablanca Work Premium بنجاح!");
   });
-
-  const RabatBNormalButton = createButton("Rabat Business Normal", function() {
+    
+  const RabatWNormalButton = createButton("Rabat Work Normal", function() {
 (function () {
     "use strict";
 
@@ -681,7 +384,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleVisa) {
             console.log("VisaType " + i + " is visible");
             var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-            VisaType.select(1); // 1 corresponds to 'Short Stay'
+            VisaType.select(2); // 2 corresponds to 'Long Stay Visa'
             VisaType.trigger("change");
 
             await new Promise(resolve => {
@@ -710,7 +413,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleSubVisa && isOkButtonClicked) {
             console.log("VisaSubType " + i + " is visible");
             var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-            VisaSubType.select(1); // 1 corresponds to 'Business'
+            VisaSubType.select(1); // 1 corresponds to 'Work'
             VisaSubType.trigger("change");
           } else {
             // console.log("VisaType " + i + " is not visible");
@@ -762,10 +465,9 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Rabat Business Normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Rabat Work Normal بنجاح!");
   });
-
-  const RabatBPremiumButton = createButton("Rabat Business Premium", function() {
+  const RabatWPremiumButton = createButton("Rabat Work Premium", function() {
 (function () {
     "use strict";
 
@@ -808,7 +510,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleLocation) {
             console.log("Location " + i + " is visible");
             var Location = $("#Location" + i).data("kendoDropDownList");
-            Location.select(1); // 1 corresponds to 'Rabat'
+            Location.select(1); // 1  'Rabat'
             Location.trigger("change");
           } else {
             // console.log("Element " + i + " is not visible");
@@ -830,7 +532,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleVisa) {
             console.log("VisaType " + i + " is visible");
             var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-            VisaType.select(1); // 1 corresponds to 'Short Stay'
+            VisaType.select(2); // 2 corresponds to 'Long Stay Visa'
             VisaType.trigger("change");
 
             await new Promise(resolve => {
@@ -859,7 +561,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
           if (isVisibleSubVisa && isOkButtonClicked) {
             console.log("VisaSubType " + i + " is visible");
             var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-            VisaSubType.select(1); // 1 corresponds to 'Business'
+            VisaSubType.select(1); // 1 corresponds to 'Work'
             VisaSubType.trigger("change");
           } else {
             // console.log("VisaType " + i + " is not visible");
@@ -879,7 +581,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     RemplirCategoryId();
     RemplirLocation();
     RemplirVisaType();
-    //--------------------//
+        //--------------------//
     var OnVerifyCaptcha;
   var onAjaxSuccess;
 
@@ -910,7 +612,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
     //-------------------//
 
 })();
-      console.log("تم تنفيذ الشيفرة لزر Casa 3 Premium بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Rabat Work Premium بنجاح!");
   });
 
   //-----------------------------------------------------------/
@@ -927,15 +629,13 @@ if (targetSibling) {
     // إضافة الأزرار إلى العنصر الذي يحتوي على الأزرار
  const row1 = document.createElement('div');
   row1.style.display = 'flex';
-  row1.appendChild(RabatTNormalButton);
-  row1.appendChild(CasaTNormalButton);
-  row1.appendChild(RabatBNormalButton);
+  row1.appendChild(CasaWNormalButton);
+  row1.appendChild(RabatWNormalButton);
     
   const row2 = document.createElement('div');
   row2.style.display = 'flex';
-  row2.appendChild(RabatTPremiumButton);
-  row2.appendChild(CasaTPremiumButton);
-  row2.appendChild(RabatBPremiumButton); 
+  row2.appendChild(CasaWPremiumButton);
+  row2.appendChild(RabatWPremiumButton);
 
   // إضافة الصفوف إلى العنصر الذي يحتوي على الأزرار
   buttonsContainer.appendChild(row1);
@@ -1023,7 +723,7 @@ function createButton(label, clickHandler) {
           clearInterval(a);
         }
       }, 100);
-    }, 120); // تأخير لمدة 3 ثواني
+    }, 1000); // تأخير لمدة 3 ثواني
   }
 })();
 
@@ -1104,7 +804,7 @@ $(document).ready(function () {
 
         setTimeout(function() {
             OnUserConsentAccept();
-        }, 100);
+        }, 400);
 
         setTimeout(function() {
             $('.btn-close').click();
@@ -1112,6 +812,6 @@ $(document).ready(function () {
             setTimeout(function() {
                // choose();
             }, 100);
-        }, 1200);
+        }, 120);
     }
 });
