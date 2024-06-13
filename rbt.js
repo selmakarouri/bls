@@ -187,7 +187,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
         }, 100);
     }, 120);
 
-})();
+
 
 
     //-------------------//
