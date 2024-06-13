@@ -308,7 +308,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
                     var AppCategoryId = $("#AppointmentCategoryId" + i).data(
                         "kendoDropDownList"
                     );
-                    AppCategoryId.select(1); // 1 corresponds to 'Normal'
+                    AppCategoryId.select(2); // 2 corresponds to 'Premium'
                     AppCategoryId.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
