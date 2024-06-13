@@ -91,12 +91,14 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                         setTimeout(resolve, 100);
                     });
 
-                    // Find the "Ok" button and click it
+                   // Wait for the modal to appear
+setTimeout(function() {
+    // Find the "Ok" button and click it
     var okButton = document.querySelector('.modal-footer .btn-primary');
     if (okButton) {
         okButton.click();
     }
-                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+}, 100); // Adjust the delay (in milliseconds) according to your needs
                 } else {
                     // console.log("VisaType " + i + " is not visible");
                 }
