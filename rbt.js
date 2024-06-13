@@ -136,7 +136,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                     var AppCategoryId = $("#AppointmentCategoryId" + i).data(
                         "kendoDropDownList"
                     );
-                    AppCategoryId.select(2); // 2 corresponds to 'Premium'
+                    AppCategoryId.select(1); // 1 corresponds to 'Normal'
                     AppCategoryId.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
