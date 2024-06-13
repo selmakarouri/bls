@@ -83,7 +83,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(1); // 1 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -255,7 +255,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(1); // 1 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -430,7 +430,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(1); // 1 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -600,7 +600,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(1); // 1 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -771,7 +771,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(1); // 1corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -944,7 +944,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(1); // 1 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
