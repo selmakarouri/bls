@@ -242,7 +242,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
         }
     }
 
-    async function RemplirVisaType() {
+   async function RemplirVisaType() {
         var VisaTypeElement;
         var isVisibleVisa;
         for (var i = 1; i < 10; i++) {
@@ -255,7 +255,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(1); // 1 corresponds to 'Schengen'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -286,7 +286,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                    VisaSubType.select(3); // 3 corresponds to 'Tourism'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -312,7 +312,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
                     var AppCategoryId = $("#AppointmentCategoryId" + i).data(
                         "kendoDropDownList"
                     );
-                    AppCategoryId.select(2); // 2 corresponds to 'Premium'
+                    AppCategoryId.select(2); // 1 corresponds to 'premium'
                     AppCategoryId.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -322,6 +322,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
             }
         }
     }
+
 
     function handleOkButtonClick() {
         isOkButtonClicked = true;
