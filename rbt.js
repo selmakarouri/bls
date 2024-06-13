@@ -26,8 +26,8 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 (function () {
     "use strict";
 
-   
-(async function() {
+  
+  (async function() {
     'use strict';
 
     var vtvUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vtv";
@@ -41,30 +41,6 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
     }
 
     let isOkButtonClicked = false;
-
-    async function RemplirCategoryId() {
-        var AppointmentCategoryIdElement;
-        var isVisible;
-        for (var i = 1; i < 10; i++) {
-            AppointmentCategoryIdElement = document.querySelector(
-                '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
-            );
-            if (AppointmentCategoryIdElement !== null) {
-                isVisible = AppointmentCategoryIdElement.offsetParent !== null;
-
-                if (isVisible) {
-                    console.log("Appointment " + i + " is visible");
-                    var AppCategoryId = $("#AppointmentCategoryId" + i).data(
-                        "kendoDropDownList"
-                    );
-                    AppCategoryId.select(1); // 1 corresponds to 'Normal'
-                    AppCategoryId.trigger("change");
-                } else {
-                    // console.log("Element " + i + " is not visible");
-                }
-            }
-        }
-    }
 
     async function RemplirLocation() {
         var locationElement;
@@ -81,6 +57,8 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                     var Location = $("#Location" + i).data("kendoDropDownList");
                     Location.select(2); // 2 corresponds to 'Casablanca'
                     Location.trigger("change");
+
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
                 } else {
                     // console.log("Element " + i + " is not visible");
                 }
@@ -110,6 +88,8 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
                     // Click the 'Ok' button in the modal
                     $('button[data-bs-dismiss="modal"]').click();
+
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
                 } else {
                     // console.log("VisaType " + i + " is not visible");
                 }
@@ -130,10 +110,38 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                    VisaSubType.select(1); // 1 corresponds to 'Work'
+                    VisaSubType.select(1); // 1 corresponds to 'work'
                     VisaSubType.trigger("change");
+
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
                 } else {
                     // console.log("VisaType " + i + " is not visible");
+                }
+            }
+        }
+    }
+
+    async function RemplirCategoryId() {
+        var AppointmentCategoryIdElement;
+        var isVisible;
+        for (var i = 1; i < 10; i++) {
+            AppointmentCategoryIdElement = document.querySelector(
+                '[aria-owns="AppointmentCategoryId' + i + '_listbox"]'
+            );
+            if (AppointmentCategoryIdElement !== null) {
+                isVisible = AppointmentCategoryIdElement.offsetParent !== null;
+
+                if (isVisible) {
+                    console.log("Appointment " + i + " is visible");
+                    var AppCategoryId = $("#AppointmentCategoryId" + i).data(
+                        "kendoDropDownList"
+                    );
+                    AppCategoryId.select(2); // 2 corresponds to 'Premium'
+                    AppCategoryId.trigger("change");
+
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+                } else {
+                    // console.log("Element " + i + " is not visible");
                 }
             }
         }
@@ -147,9 +155,11 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
     $('button[data-bs-dismiss="modal"]').on("click", handleOkButtonClick);
 
-    await RemplirCategoryId();
     await RemplirLocation();
+    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
     await RemplirVisaType();
+    await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
+    await RemplirCategoryId();
 
     //--------------------//
     var OnVerifyCaptcha;
@@ -177,6 +187,12 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
             }
         }, 100);
     }, 120);
+
+
+
+
+})();
+
 
 
 
