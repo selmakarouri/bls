@@ -27,7 +27,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 (function () {
     "use strict";
 
-   (async function() {
+  (async function() {
     'use strict';
 
     var vtvUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vtv";
@@ -189,7 +189,6 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
     }, 120);
 
 })();
-
 
     //-------------------//
 
