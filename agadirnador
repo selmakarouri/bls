@@ -705,7 +705,9 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
             }
         }, 100);
     }, 120);
+
 })();
+
     //-------------------//
 
 })();
@@ -715,21 +717,6 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
   const TangerNormalButton = createButton("Tanger Normal", function() {
 (function () {
     "use strict";
-
-      (async function() {
-    'use strict';
-
-    var vtvUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vtv";
-    var thirdUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vt";
-
-    if (window.location.href.startsWith(vtvUrlPrefix)) {
-        const btnVerify = document.querySelector("#btnVerify");
-        if (btnVerify) {
-            btnVerify.click();
-        }
-    }
-
-    let isOkButtonClicked = false;
 
      (async function() {
     'use strict';
@@ -893,6 +880,7 @@ const AgadirPremiumButton = createButton("Agadir Premium", function() {
     }, 120);
 
 })();
+
     //-------------------//
 
 })();
