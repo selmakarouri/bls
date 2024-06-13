@@ -87,16 +87,16 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                     VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
-                    await new Promise(resolve => {
+                 await new Promise(resolve => {
                         setTimeout(resolve, 100);
                     });
 
-                // Click the 'Ok' button in the modal
+                    // Click the 'Ok' button in the modal
                     $('button[data-bs-dismiss="modal"]').click();
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
                 } else {
-                } else {
+              
                     // console.log("VisaType " + i + " is not visible");
                 }
             }
