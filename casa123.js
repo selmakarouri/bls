@@ -1077,7 +1077,7 @@ if (targetSibling) {
     // إضافة الأزرار إلى العنصر الذي يحتوي على الأزرار
  const row1 = document.createElement('div');
   row1.style.display = 'flex';
-  row1.appendChild(AgadirNormalButton);
+  row1.appendChild(Casa1NormalButton);
   row1.appendChild(NadorNormalButton);
   row1.appendChild(TangerNormalButton);
     
