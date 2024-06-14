@@ -1077,15 +1077,15 @@ if (targetSibling) {
     // إضافة الأزرار إلى العنصر الذي يحتوي على الأزرار
  const row1 = document.createElement('div');
   row1.style.display = 'flex';
-  row1.appendChild(AgadirNormalButton);
-  row1.appendChild(NadorNormalButton);
-  row1.appendChild(TangerNormalButton);
+  row1.appendChild(Casa1NormalButton);
+  row1.appendChild(Casa2NormalButton);
+  row1.appendChild(Casa3NormalButton);
     
   const row2 = document.createElement('div');
   row2.style.display = 'flex';
-  row2.appendChild(AgadirPremiumButton);
-  row2.appendChild(NadorPremiumButton);
-  row2.appendChild(TangerPremiumButton); 
+  row2.appendChild(Casa1PremiumButton);
+  row2.appendChild(Casa2PremiumButton);
+  row2.appendChild(Casa3PremiumButton); 
 
   // إضافة الصفوف إلى العنصر الذي يحتوي على الأزرار
   buttonsContainer.appendChild(row1);
