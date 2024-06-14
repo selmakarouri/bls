@@ -28,7 +28,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   // دالة لإضافة الأزرار إلى الصفحة
 
   // إنشاء الأزرار
-  const AgadirNormalButton = createButton("CASA1", function() {
+  const AgadirNormalButton = createButton("Agadir Normal", function() {
 (function () {
     "use strict";
 
@@ -60,7 +60,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(6); //6 corresponds to 'CAsablanca'
+                    Location.select(6); //6 corresponds to 'Casablanca'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -84,7 +84,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'casa 1'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                  await new Promise(resolve => {
@@ -116,7 +116,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'casa 1'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -200,9 +200,9 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Casa 1 Normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Agadir Normal بنجاح!");
   });
-const AgadirPremiumButton = createButton(" CASA1P", function() {
+const AgadirPremiumButton = createButton("Agadir Premium", function() {
 (function () {
     "use strict";
   (async function() {
@@ -233,7 +233,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(6); //6 corresponds to 'Casablanca'
+                    Location.select(5); //5 corresponds to 'Agadir'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -257,7 +257,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Casa 1'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -288,7 +288,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Casa 1'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -371,10 +371,10 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
     //-------------------//
 
 })();
-   console.log("تم تنفيذ الشيفرة لزر Casa 1 premium بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Agadir Premium بنجاح!");
   });
     
-  const NadorNormalButton = createButton("Casa2l", function() {
+  const NadorNormalButton = createButton("Nador Normal", function() {
 (function () {
     "use strict";
 
@@ -406,7 +406,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(6; //6 corresponds to 'Casablanca'
+                    Location.select(4); //4 corresponds to 'Nador'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -430,7 +430,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(3); // 3 corresponds to 'Casa2'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -461,7 +461,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Casa 2'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -543,9 +543,9 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Casa 2 normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Nador Normal بنجاح!");
   });
-  const NadorPremiumButton = createButton(" Casa2P", function() {
+  const NadorPremiumButton = createButton("Nador Premium", function() {
 (function () {
     "use strict";
 
@@ -577,7 +577,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(6); //6 corresponds to 'CAsablanca'
+                    Location.select(4); //4 corresponds to 'Nador'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -601,7 +601,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(3); // 3 corresponds to 'Casa 2'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -632,7 +632,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Casa 2'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -714,10 +714,10 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Casa 2 Premium بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Nador Premium بنجاح!");
   });
 
-  const TangerNormalButton = createButton("CASA3", function() {
+  const TangerNormalButton = createButton("Tanger Normal", function() {
 (function () {
     "use strict";
 
@@ -749,7 +749,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(6); //6 corresponds to 'Casablanca'
+                    Location.select(3); //3 corresponds to 'Tanger'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -773,7 +773,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(4); // 4 corresponds to 'CASA 3'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -804,7 +804,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Casa 3'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -887,10 +887,10 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر   casa 3 بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Tanger Normal بنجاح!");
   });
 
-  const TangerPremiumButton = createButton("CASA3P", function() {
+  const TangerPremiumButton = createButton("Tanger Premium", function() {
 (function () {
     "use strict";
 
@@ -922,7 +922,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(3); //3 corresponds to 'Casablanca'
+                    Location.select(3); //3 corresponds to 'Tanger'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -946,7 +946,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(4); // 4 corresponds to 'Casa 3'
+                    VisaType.select(2); // 2 corresponds to 'Schengen'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -977,7 +977,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Casa 3'
+                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -1060,7 +1060,7 @@ const AgadirPremiumButton = createButton(" CASA1P", function() {
     //-------------------//
 
 })();
-      console.log("تم تنفيذ الشيفرة لزر Casa 3 Premium بنجاح!");
+      console.log("تم تنفيذ الشيفرة لزر Tanger Premium بنجاح!");
   });
 
   //-----------------------------------------------------------/
