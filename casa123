@@ -28,7 +28,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   // دالة لإضافة الأزرار إلى الصفحة
 
   // إنشاء الأزرار
-  const AgadirNormalButton = createButton("CASA 1 ", function() {
+  const AgadirNormalButton = createButton("CASA1", function() {
 (function () {
     "use strict";
 
@@ -202,7 +202,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 })();
     console.log("تم تنفيذ الشيفرة لزر Casa 1 Normal بنجاح!");
   });
-const AgadirPremiumButton = createButton(" CASA 1 Premium", function() {
+const AgadirPremiumButton = createButton(" CASA1P", function() {
 (function () {
     "use strict";
   (async function() {
@@ -374,7 +374,7 @@ const AgadirPremiumButton = createButton(" CASA 1 Premium", function() {
    console.log("تم تنفيذ الشيفرة لزر Casa 1 premium بنجاح!");
   });
     
-  const NadorNormalButton = createButton("Casa 2 Normal", function() {
+  const NadorNormalButton = createButton("Casa2l", function() {
 (function () {
     "use strict";
 
@@ -545,7 +545,7 @@ const AgadirPremiumButton = createButton(" CASA 1 Premium", function() {
 })();
     console.log("تم تنفيذ الشيفرة لزر Casa 2 normal بنجاح!");
   });
-  const NadorPremiumButton = createButton(" Casa 2 Premium", function() {
+  const NadorPremiumButton = createButton(" Casa2P", function() {
 (function () {
     "use strict";
 
@@ -717,7 +717,7 @@ const AgadirPremiumButton = createButton(" CASA 1 Premium", function() {
     console.log("تم تنفيذ الشيفرة لزر Casa 2 Premium بنجاح!");
   });
 
-  const TangerNormalButton = createButton("CASA 3 Normal", function() {
+  const TangerNormalButton = createButton("CASA3", function() {
 (function () {
     "use strict";
 
@@ -887,10 +887,10 @@ const AgadirPremiumButton = createButton(" CASA 1 Premium", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Tanger Normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر   casa 3 بنجاح!");
   });
 
-  const TangerPremiumButton = createButton("CASA 2 Premium", function() {
+  const TangerPremiumButton = createButton("CASA3P", function() {
 (function () {
     "use strict";
 
