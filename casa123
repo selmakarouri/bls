@@ -28,7 +28,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   // دالة لإضافة الأزرار إلى الصفحة
 
   // إنشاء الأزرار
-  const AgadirNormalButton = createButton("Agadir Normal", function() {
+  const AgadirNormalButton = createButton("casa 1", function() {
 (function () {
     "use strict";
 
@@ -84,7 +84,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(2); // 2 corresponds to 'casa 1'
                     VisaType.trigger("change");
 
                  await new Promise(resolve => {
@@ -116,7 +116,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
+                     VisaSubType.select(1); // 1 corresponds to 'casa 1'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
