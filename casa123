@@ -200,7 +200,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Agadir Normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر casa 1 normal بنجاح!");
   });
 const AgadirPremiumButton = createButton("Agadir Premium", function() {
 (function () {
