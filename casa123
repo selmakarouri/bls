@@ -28,7 +28,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   // دالة لإضافة الأزرار إلى الصفحة
 
   // إنشاء الأزرار
-  const Casa1NormalButton = createButton("casa 1 Normal", function() {
+  const Casa1NormalButton = createButton("Casa 1 Normal", function() {
 (function () {
     "use strict";
 
@@ -202,7 +202,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
 })();
     console.log("تم تنفيذ الشيفرة لزر casa 1 normal بنجاح!");
   });
-const AgadirPremiumButton = createButton("casa 1 Premium", function() {
+const AgadirPremiumButton = createButton("Casa 1 Premium", function() {
 (function () {
     "use strict";
   (async function() {
@@ -545,7 +545,7 @@ const AgadirPremiumButton = createButton("casa 1 Premium", function() {
 })();
     console.log("تم تنفيذ الشيفرة لزر Casa 2 Normal بنجاح!");
   });
-  const casa3PremiumButton = createButton("Casa 3 Premium", function() {
+  const casa2PremiumButton = createButton("Casa2 Premium", function() {
 (function () {
     "use strict";
 
