@@ -195,7 +195,19 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
     }, 120);
 
 })();
-
+document.addEventListener('DOMContentLoaded', function() {
+ 
+    setTimeout(function() {
+  content
+        var buttons = document.querySelectorAll('button');
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].textContent.trim() === 'Ok') {
+                buttons[i].click();
+                break;
+            }
+        }
+    }, 1000); 
+});
     //-------------------//
 
 
