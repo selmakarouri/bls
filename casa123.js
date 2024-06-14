@@ -717,7 +717,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
     console.log("تم تنفيذ الشيفرة لزر Casa 2 Premium بنجاح!");
   });
 
-  const TangerNormalButton = createButton("Tanger Normal", function() {
+  const Casa3NormalButton = createButton("Casa 3 Normal", function() {
 (function () {
     "use strict";
 
@@ -749,7 +749,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(3); //3 corresponds to 'Tanger'
+                    Location.select(6); //6 corresponds to 'Casablanca'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -773,7 +773,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(4); // 4 corresponds to 'Casa3'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -804,7 +804,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                     VisaSubType.select(1); // 1 corresponds to 'Schengen'
+                     VisaSubType.select(1); // 1 corresponds to 'Casa3'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -887,10 +887,10 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
     //-------------------//
 
 })();
-    console.log("تم تنفيذ الشيفرة لزر Tanger Normal بنجاح!");
+    console.log("تم تنفيذ الشيفرة لزر Casa 3 Normal بنجاح!");
   });
 
-  const TangerPremiumButton = createButton("Tanger Premium", function() {
+  const TangerPremiumButton = createButton("Casa 3 Premium", function() {
 (function () {
     "use strict";
 
@@ -922,7 +922,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
                 if (isVisibleLocation) {
                     console.log("Location " + i + " is visible");
                     var Location = $("#Location" + i).data("kendoDropDownList");
-                    Location.select(3); //3 corresponds to 'Tanger'
+                    Location.select(6); //6 corresponds to 'Casablanca'
                     Location.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
@@ -946,7 +946,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(2); // 2 corresponds to 'Schengen'
+                    VisaType.select(4); // 4 corresponds to 'Casa3'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
@@ -1060,7 +1060,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
     //-------------------//
 
 })();
-      console.log("تم تنفيذ الشيفرة لزر Tanger Premium بنجاح!");
+      console.log("تم تنفيذ الشيفرة لزر Casa 3 Premium بنجاح!");
   });
 
   //-----------------------------------------------------------/
@@ -1079,13 +1079,13 @@ if (targetSibling) {
   row1.style.display = 'flex';
   row1.appendChild(Casa1NormalButton);
   row1.appendChild(Casa2NormalButton);
-  row1.appendChild(TangerNormalButton);
+  row1.appendChild(Casa3NormalButton);
     
   const row2 = document.createElement('div');
   row2.style.display = 'flex';
   row2.appendChild(Casa1PremiumButton);
   row2.appendChild(Casa2PremiumButton);
-  row2.appendChild(TangerPremiumButton); 
+  row2.appendChild(Casa3PremiumButton); 
 
   // إضافة الصفوف إلى العنصر الذي يحتوي على الأزرار
   buttonsContainer.appendChild(row1);
