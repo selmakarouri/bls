@@ -890,7 +890,7 @@ const Casa1PremiumButton = createButton("Casa 1 Premium", function() {
     console.log("تم تنفيذ الشيفرة لزر Casa 3 Normal بنجاح!");
   });
 
-  const TangerPremiumButton = createButton("Casa 3 Premium", function() {
+  const Casa3PremiumButton = createButton("Casa 3 Premium", function() {
 (function () {
     "use strict";
 
