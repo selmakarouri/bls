@@ -1078,13 +1078,13 @@ if (targetSibling) {
  const row1 = document.createElement('div');
   row1.style.display = 'flex';
   row1.appendChild(Casa1NormalButton);
-  row1.appendChild(NadorNormalButton);
+  row1.appendChild(Casa2NormalButton);
   row1.appendChild(TangerNormalButton);
     
   const row2 = document.createElement('div');
   row2.style.display = 'flex';
-  row2.appendChild(AgadirPremiumButton);
-  row2.appendChild(NadorPremiumButton);
+  row2.appendChild(Casa1PremiumButton);
+  row2.appendChild(Casa2PremiumButton);
   row2.appendChild(TangerPremiumButton); 
 
   // إضافة الصفوف إلى العنصر الذي يحتوي على الأزرار
