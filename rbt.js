@@ -147,6 +147,7 @@ const CasaWPremiumButton = createButton("Casa Work Premium", function() {
 
 })();
 console.log("تم تنفيذ الشيفرة لزر Rabat Work Premium بنجاح!");
+ });
   //-----------------------------------------------------------/
 
   // إضافة الأزرار إلى العنصر الذي يحتوي على الأزرار
