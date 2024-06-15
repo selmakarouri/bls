@@ -1,3 +1,13 @@
+
+var vtvUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vtv";
+var thirdUrlPrefix = "https://morocco.blsportugal.com/MAR/bls/vt";
+
+
+
+
+
+
+
 //تحقق من الصفحة ونفذ الإجراء المناسب
 if (window.location.href.startsWith(vtvUrlPrefix)) {
   const btnVerify = document.querySelector("#btnVerify");
