@@ -1189,6 +1189,14 @@ function createButton(label, clickHandler) {
   }
 })();
 
+// Wait for the modal to be fully shown
+$(document).ready(function() {
+    // Function to handle the modal shown event
+    $('#commonModal').on('shown.bs.modal', function () {
+        // Find the Ok button and trigger a click event
+        $('#commonModal .btn-primary').click();
+    });
+});
 
 //--------------------مؤلف----------------------------//
 
