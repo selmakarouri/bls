@@ -283,7 +283,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
                 if (isVisibleSubVisa && isOkButtonClicked) {
                     console.log("VisaSubType " + i + " is visible");
                     var VisaSubType = $("#VisaSubType" + i).data("kendoDropDownList");
-                    VisaSubType.select(3); // 3 corresponds to 'Tourism'
+                    VisaSubType.select(18); // 18 corresponds to 'Tourism'
                     VisaSubType.trigger("change");
 
                     await new Promise(resolve => setTimeout(resolve, 100)); // Ajouter un délai de 100 ms
