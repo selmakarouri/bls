@@ -427,7 +427,7 @@ const RabatTPremiumButton = createButton("Rabat Tourism Premium", function() {
                 if (isVisibleVisa) {
                     console.log("VisaType " + i + " is visible");
                     var VisaType = $("#VisaType" + i).data("kendoDropDownList");
-                    VisaType.select(1); // 1 corresponds to 'Short Stay Visa'
+                    VisaType.select(2); // 2 corresponds to 'Short Stay Visa'
                     VisaType.trigger("change");
 
                     await new Promise(resolve => {
